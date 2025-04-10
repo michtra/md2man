@@ -23,6 +23,16 @@ md2man <input_dir> <output_dir> [title] [author]
 - `title`: (Optional) Title of the manual (default: "Reference Manual")
 - `author`: (Optional) Author name to be displayed in the manual
 
+## File Organization
+
+Files in the input directory are compiled in alphabetical order. You can use numeric prefixes to control the order:
+
+- `00-introduction.md` will appear first
+- `01-getting-started.md` will appear second
+- `02-advanced-topics.md` will appear third
+
+This allows you to organize your content logically, regardless of the original filenames.
+
 ## Templates
 
 md2man uses external template files for styling and JavaScript functionality:
