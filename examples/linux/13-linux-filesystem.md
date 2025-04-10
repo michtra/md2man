@@ -2,33 +2,31 @@
 
 This section covers the Linux filesystem hierarchy, important directories, and filesystem-related commands.
 
-## Filesystem Hierarchy
+# Linux Filesystem Hierarchy
 
 The Linux filesystem follows the Filesystem Hierarchy Standard (FHS), which defines the directory structure and directory contents.
 
-**Important Directories:**
+## Important Directories
 
-| Directory | Purpose                                                                         |
-|-----------|---------------------------------------------------------------------------------|
-| `/`       | Root directory (the starting point of the filesystem)                           |
-| `/bin`    | Essential user binaries (commands)                                              |
-| `/boot`   | Boot loader files, Linux kernel                                                 |
-| `/dev`    | Device files                                                                    |
-| `/etc`    | System configuration files                                                      |
-| `/home`   | User home directories                                                           |
-| `/lib`    | Essential shared libraries and kernel modules                                   |
-| `/media`  | Mount point for removable media                                                 |
-| `/mnt`    | Mount point for temporarily mounted filesystems                                 |
-| `/opt`    | Optional application software packages                                          |
-| `/proc`   | Virtual filesystem for process and system information                           |
-| `/root`   | Home directory for the root user                                                |
-| `/run`    | Run-time variable data                                                          |
-| `/sbin`   | System binaries (system administration commands)                                |
-| `/srv`    | Data for services provided by the system                                        |
-| `/sys`    | Virtual filesystem for system hardware information                              |
-| `/tmp`    | Temporary files                                                                 |
-| `/usr`    | Secondary hierarchy for user data (includes binaries, libraries, documentation) |
-| `/var`    | Variable data (logs, spool files, temporary e-mail files)                       |
+- **/** - Root directory (the starting point of the filesystem)
+- **/bin** - Essential user binaries (commands)
+- **/boot** - Boot loader files, Linux kernel
+- **/dev** - Device files
+- **/etc** - System configuration files
+- **/home** - User home directories
+- **/lib** - Essential shared libraries and kernel modules
+- **/media** - Mount point for removable media
+- **/mnt** - Mount point for temporarily mounted filesystems
+- **/opt** - Optional application software packages
+- **/proc** - Virtual filesystem for process and system information
+- **/root** - Home directory for the root user
+- **/run** - Run-time variable data
+- **/sbin** - System binaries (system administration commands)
+- **/srv** - Data for services provided by the system
+- **/sys** - Virtual filesystem for system hardware information
+- **/tmp** - Temporary files
+- **/usr** - Secondary hierarchy for user data (includes binaries, libraries, documentation)
+- **/var** - Variable data (logs, spool files, temporary e-mail files)
 
 ## Root Directory (/)
 
