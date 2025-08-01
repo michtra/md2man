@@ -112,7 +112,14 @@ MarkdownElement Parser::parseList(const std::vector<std::string> &lines, size_t 
         }
 
         // extract list item content (remove marker and leading space)
-        size_t contentStart = line.find_first_of("*-+1234567890") + 1;
+        size_t contentStart = 0;
+        if (std::regex_match(line, std::regex(R"(^\d+\.\s.*)"))) {
+            // For numbered lists, skip the number and dot
+            contentStart = line.find('.') + 1;
+        } else {
+            // For bullet lists, skip the marker
+            contentStart = line.find_first_of("*-+") + 1;
+        }
         while (contentStart < line.size() && std::isspace(line[contentStart])) {
             contentStart++;
         }

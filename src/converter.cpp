@@ -68,15 +68,14 @@ std::string Converter::convertCodeBlock(const MarkdownElement &element) {
 std::string Converter::convertList(const MarkdownElement &element) {
     std::stringstream html;
 
-    const bool isOrdered = element.attributes.at("ordered") == "true";
-
-    html << (isOrdered ? "<ol>" : "<ul>") << "\n";
+    // convert lists to unordered lists with dashes
+    html << "<ul>" << "\n";
 
     for (const auto &item: element.children) {
         html << "  <li>" << item.content << "</li>\n";
     }
 
-    html << (isOrdered ? "</ol>" : "</ul>") << "\n";
+    html << "</ul>" << "\n";
 
     return html.str();
 }
